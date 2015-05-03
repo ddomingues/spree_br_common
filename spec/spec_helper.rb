@@ -2,6 +2,7 @@
 require 'simplecov'
 SimpleCov.start do
   add_filter 'spec/dummy'
+  add_filter 'spec/support'
   add_group 'Controllers', 'app/controllers'
   add_group 'Helpers', 'app/helpers'
   add_group 'Mailers', 'app/mailers'
@@ -30,6 +31,8 @@ require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/factories'
 require 'spree/testing_support/url_helpers'
 
+require 'spree/api/testing_support/helpers'
+
 # Requires factories defined in lib/spree_br_commons/factories.rb
 require 'spree_br_commons/factories'
 
@@ -46,6 +49,8 @@ RSpec.configure do |config|
   # visit spree.admin_path
   # current_path.should eql(spree.products_path)
   config.include Spree::TestingSupport::UrlHelpers
+
+  config.include Spree::Api::TestingSupport::Helpers
 
   # == Mock Framework
   #
@@ -83,5 +88,5 @@ RSpec.configure do |config|
   end
 
   config.fail_fast = ENV['FAIL_FAST'] || false
-  config.order = "random"
+  config.order = 'random'
 end
