@@ -1,7 +1,7 @@
 SpreeBrCommons
 ==============
 
-Introduction goes here.
+This extension has goal to provide commons aspects as cities, extras address informations and some seeds to Brazil.
 
 Installation
 ------------
@@ -36,4 +36,4 @@ Simply add this require statement to your spec_helper:
 require 'spree_br_commons/factories'
 ```
 
-Copyright (c) 2015 [name of extension creator], released under the New BSD License
+Copyright (c) 2015 [Diego Domingues], released under the New BSD License
