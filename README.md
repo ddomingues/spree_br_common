@@ -1,6 +1,8 @@
 SpreeBrCommons
 ==============
 
+[![Build Status](https://travis-ci.org/ddomingues/spree_br_common.svg)](https://travis-ci.org/ddomingues/spree_br_common)
+
 This extension has goal to provide commons aspects as cities, extras address informations and some seeds to Brazil.
 
 Installation
