@@ -11,6 +11,7 @@ group :test do
   gem 'capybara-screenshot', '~> 1.0.9'
   gem 'shoulda-matchers', '~> 2.8.0'
   gem 'poltergeist', '~> 1.6.0'
+  gem 'codeclimate-test-reporter', require: nil
 end
 
 gemspec
