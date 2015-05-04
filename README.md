@@ -1,24 +1,24 @@
-SpreeBrCommons
+SpreeBrCommon
 ==============
 
 [![Build Status](https://travis-ci.org/ddomingues/spree_br_common.svg)](https://travis-ci.org/ddomingues/spree_br_common)
 
-This extension has goal to provide commons aspects as cities, extras address informations and some seeds to Brazil.
+This extension has goal to provide common aspects as cities, extras address informations and some seeds to Brazil.
 
 Installation
 ------------
 
-Add spree_br_commons to your Gemfile:
+Add spree_br_common to your Gemfile:
 
 ```ruby
-gem 'spree_br_commons'
+gem 'spree_br_common'
 ```
 
 Bundle your dependencies and run the installation generator:
 
 ```shell
 bundle
-bundle exec rails g spree_br_commons:install
+bundle exec rails g spree_br_common:install
 ```
 
 Testing
@@ -35,7 +35,7 @@ When testing your applications integration with this extension you may use it's 
 Simply add this require statement to your spec_helper:
 
 ```ruby
-require 'spree_br_commons/factories'
+require 'spree_br_common/factories'
 ```
 
 Copyright (c) 2015 [Diego Domingues], released under the New BSD License

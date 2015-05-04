@@ -1,8 +1,8 @@
-module SpreeBrCommons
+module SpreeBrCommon
   class Engine < Rails::Engine
     require 'spree/core'
     isolate_namespace Spree
-    engine_name 'spree_br_commons'
+    engine_name 'spree_br_common'
 
     # use rspec for tests
     config.generators do |g|

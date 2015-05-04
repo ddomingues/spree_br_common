@@ -1,10 +1,10 @@
 # encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_br_commons'
+  s.name        = 'spree_br_common'
   s.version     = '3.0.0'
-  s.summary     = 'Brazil commons aspects'
-  s.description = 'This extension has goal to provide commons aspects as cities, extras address informations and some seeds to Brazil'
+  s.summary     = 'Brazil common aspects'
+  s.description = 'This extension has goal to provide common aspects as cities, extras address informations and some seeds to Brazil'
   s.required_ruby_version = '>= 2.0.0'
 
   s.author    = 'Diego Domingues'
