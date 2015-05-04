@@ -1,0 +1,2 @@
+cut 'p[data-erb-id*="city"]'
+insert_after 'p[data-erb-id*="state"]'

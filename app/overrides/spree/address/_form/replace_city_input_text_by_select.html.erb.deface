@@ -1,0 +1,18 @@
+<!-- replace 'p[data-erb-id*="city"]' -->
+<p class="form-group" id=<%="#{address_id}city" %>>
+  <%= form.label :city, Spree.t(:city) %><span class="required">*</span><br />
+  <%= form.collection_select(
+              :city_id, address.state ? address.state.cities : [],
+              :id, :name,
+              {:include_blank => false},
+              {:class => 'form-control required'}
+      ) %>
+
+  <% unless address.state %>
+    <script>
+      $(function() {
+          Spree.updateCity('b');
+      });
+    </script>
+  <% end %>
+</p>

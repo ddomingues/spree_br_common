@@ -11,6 +11,17 @@ require 'rspec/rails'
 require 'database_cleaner'
 require 'ffaker'
 
+require 'capybara/rspec'
+require 'capybara-screenshot/rspec'
+
+if ENV['WEBDRIVER'] == 'accessible'
+  require 'capybara/accessible'
+  Capybara.javascript_driver = :accessible
+else
+  require 'capybara/poltergeist'
+  Capybara.javascript_driver = :poltergeist
+end
+
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[File.join(File.dirname(__FILE__), 'support/**/*.rb')].each { |f| require f }
