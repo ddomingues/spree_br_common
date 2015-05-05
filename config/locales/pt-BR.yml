@@ -1,0 +1,6 @@
+pt-BR:
+  activerecord:
+    attributes:
+      spree/address:
+        number: Número
+        district: Bairro

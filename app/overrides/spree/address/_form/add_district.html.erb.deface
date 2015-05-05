@@ -1,0 +1,5 @@
+<!-- insert_after '[data-erb-id*="address2"]' -->
+<p class="form-group" id=<%="#{address_id}district" %>>
+  <%= form.label :district, Spree.t(:district) %><span class="required">*</span><br />
+  <%= form.text_field :district, class: 'form-control required ajax-loading' %>
+</p>

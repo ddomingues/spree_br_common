@@ -1,0 +1,5 @@
+<!-- insert_before '[data-erb-id*="address2"]' -->
+<p class="form-group" id=<%="#{address_id}number" %>>
+  <%= form.label :number, Spree.t(:number) %><span class="required">*</span><br />
+  <%= form.number_field :number, class: 'form-control required ajax-loading' %>
+</p>

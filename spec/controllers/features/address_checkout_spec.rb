@@ -38,7 +38,9 @@ describe 'Checkout', type: :feature, inaccessible: true do
     address = 'order_bill_address_attributes'
     fill_in "#{address}_firstname", with: 'Ryan'
     fill_in "#{address}_lastname", with: 'Bigg'
-    fill_in "#{address}_address1", with: '143 Swan Street'
+    fill_in "#{address}_address1", with: 'Swan Street'
+    fill_in "#{address}_number", with: '143'
+    fill_in "#{address}_district", with: 'Carville'
     select 'United States of America', from: "#{address}_country_id"
     select 'Alabama', from: "#{address}_state_id"
     select city.name, :from => "#{address}_city_id"
