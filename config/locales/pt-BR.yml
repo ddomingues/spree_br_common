@@ -4,3 +4,11 @@ pt-BR:
       spree/address:
         number: Número
         district: Bairro
+      spree/user:
+        cpf: CPF
+        date_of_birth: Data de Nascimento
+  spree:
+    date_picker:
+      js_mask: 00/00/0000
+      format: '%d/%m/%Y'
+    full_name: Nome Completo

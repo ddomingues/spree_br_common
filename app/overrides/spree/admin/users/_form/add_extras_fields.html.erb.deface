@@ -1,0 +1,39 @@
+<!-- insert_top '[data-hook="admin_user_form_fields"]' -->
+<div class="col-md-6">
+  <%= f.field_container :first_name do %>
+      <%= f.label :first_name, Spree.t(:first_name) %>
+      <%= f.text_field :first_name, :class => 'fullwidth' %>
+      <%= f.error_message_on :first_name %>
+  <% end %>
+
+  <%= f.field_container :cpf do %>
+      <%= f.label :cpf, Spree.t(:cpf) %>
+      <%= f.text_field :cpf, :class => 'fullwidth' %>
+      <%= f.error_message_on :cpf %>
+  <% end %>
+
+  <%= f.field_container :phone do %>
+      <%= f.label :phone, Spree.t(:phone) %>
+      <%= f.text_field :phone, :class => 'fullwidth' %>
+      <%= f.error_message_on :phone %>
+  <% end %>
+</div>
+<div class="col-md-6">
+  <%= f.field_container :last_name do %>
+      <%= f.label :last_name, Spree.t(:last_name) %>
+      <%= f.text_field :last_name, :class => 'fullwidth' %>
+      <%= f.error_message_on :last_name %>
+  <% end %>
+
+  <%= f.field_container :date_of_birth do %>
+      <%= f.label :date_of_birth, Spree.t(:date_of_birth) %>
+      <%= f.date_field :date_of_birth, :class => 'fullwidth' %>
+      <%= f.error_message_on :date_of_birth %>
+  <% end %>
+
+  <%= f.field_container :alternative_phone do %>
+      <%= f.label :alternative_phone, Spree.t(:alternative_phone) %>
+      <%= f.text_field :alternative_phone, :class => 'fullwidth' %>
+      <%= f.error_message_on :alternative_phone %>
+  <% end %>
+</div>
