@@ -1,1 +1,11 @@
 en:
+  activerecord:
+    attributes:
+      spree/user:
+        cpf: CPF
+  spree:
+    date_picker:
+      js_mask: 0000/00/00
+      format: '%Y/%m/%d'
+    cpf: CPF
+    date_of_birth: Date Of Birth

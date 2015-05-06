@@ -12,6 +12,7 @@ group :test do
   gem 'shoulda-matchers', '~> 2.8.0'
   gem 'poltergeist', '~> 1.6.0'
   gem 'codeclimate-test-reporter', require: nil
+  gem 'byebug'
 end
 
 gemspec
