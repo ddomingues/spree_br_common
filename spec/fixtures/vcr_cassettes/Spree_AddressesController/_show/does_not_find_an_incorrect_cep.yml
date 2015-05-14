@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.postmon.com.br/v1/cep/00000000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: CEP 00000000 nao encontrado
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 08 May 2015 02:39:13 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 08 May 2015 02:30:57 GMT
+recorded_with: VCR 2.9.3

@@ -9,12 +9,47 @@ Spree.ready(function ($) {
     }
   }
 
+  function isPresent(value) {
+    return $.trim(value).length
+  }
+
   var $checkoutFormAddress = $('#checkout_form_address');
 
   if ($checkoutFormAddress.is('*')) {
-    var citieCallbacks = [];
+    var citiesCallbacks = [];
 
     $checkoutFormAddress.validate();
+
+    Spree.fillAddress = function (region, zipcode) {
+
+      $('.ajax-loading').attr({disabled: true});
+
+      Spree.ajax(Spree.routes.address_show(zipcode))
+        .done(function (data) {
+          if (isPresent(data.estado)) {
+
+            if (isPresent(data.cidade))
+              citiesCallbacks.push(function () {
+                var $city = _in(region).find('city select');
+                var idCity = $city.find('option:contains("' + data.cidade + '")').val();
+                $city.val(idCity);
+              });
+
+            var $state = _in(region).find('state select');
+            var idState = $state.find('option[data-uf="' + data.estado + '"]').val();
+            $state.val(idState).trigger('change');
+          }
+
+          _in(region).find('address1 input').val(data.logradouro);
+          _in(region).find('district input').val(data.bairro);
+        })
+        .fail(function () {
+          alert('Não foi possível encontrar o CEP especificado, por favor, verifique ou preencha manualmente o cadastro');
+        })
+        .always(function () {
+          $('.ajax-loading').attr({disabled: false});
+        });
+    };
 
     Spree.getStateId = function (region) {
       return _in(region).find('state select').val();
@@ -62,16 +97,23 @@ Spree.ready(function ($) {
 
         citySelect.append(optionsCities);
 
-        while(citieCallbacks.length) {
-          citieCallbacks.pop()();
+        while (citiesCallbacks.length) {
+          citiesCallbacks.pop()();
         }
       }
     };
 
     $(['b', 's']).each(function (i, region) {
-      _in(region).find('state select').on('change', function () {
+      function onChangeUpdateAddress() {
+        return Spree.fillAddress(region, $(this).cleanVal());
+      }
+
+      function onChangeUpdateCity() {
         return Spree.updateCity(region);
-      });
-    })
+      }
+
+      _in(region).find('state select').on('change', onChangeUpdateCity);
+      _in(region).find('zipcode input').on('change', onChangeUpdateAddress);
+    });
   }
 });

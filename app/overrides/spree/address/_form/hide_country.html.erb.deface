@@ -1,0 +1,4 @@
+<!-- replace 'p[data-erb-id*="country"]' -->
+<p class="form-group" id=<%="#{address_id}country" %>>
+  <%= form.hidden_field :country_id %>
+</p>

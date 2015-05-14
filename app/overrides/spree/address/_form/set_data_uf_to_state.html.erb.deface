@@ -1,0 +1,15 @@
+<!-- replace 'erb:contains("state_elements = [")' -->
+<% states =  address.country.states.map{ |s| [s.name, s.id, {'data-uf'=>s.abbr}]} %>
+<% state_elements = [
+  form.select(
+    :state_id,
+    options_for_select(states, address.state ? address.state.id: nil),
+    {:include_blank => false},
+    {:class => 'ajax-loading form-control ' + (have_states ? 'required' : 'hidden'),
+    :disabled => !have_states}
+  ) +
+  form.text_field(:state_name,
+                  :class => !have_states ? 'form-control required' : 'form-control hidden',
+                  :disabled => have_states)
+  ].join.gsub('"', "'").gsub("\n", "")
+%>

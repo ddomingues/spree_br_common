@@ -12,6 +12,8 @@ group :test do
   gem 'shoulda-matchers', '~> 2.8.0'
   gem 'poltergeist', '~> 1.6.0'
   gem 'codeclimate-test-reporter', require: nil
+  gem 'vcr', '~> 2.9.3'
+  gem 'webmock', '~> 1.21.0'
   gem 'byebug'
 end
 
