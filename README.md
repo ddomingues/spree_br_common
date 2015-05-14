@@ -18,6 +18,8 @@ This extension has goal to provide common aspects as cities, extras address info
 	* phone
 	* alternative phone
 	* date of birth
+* Cep Autocomplete: using the [Postmon](http://postmon.com.br/) REST API
+* Default Seeds to Brazil 
 
 # Installation
 
