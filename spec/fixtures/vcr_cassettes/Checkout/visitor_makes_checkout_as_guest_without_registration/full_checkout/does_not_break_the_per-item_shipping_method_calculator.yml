@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.postmon.com.br/v1/cep/12345
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Tue, 12 May 2015 05:46:09 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Content-Length:
+      - '368'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA3VSTU/CQBC9+ytGSDyJ2/KRYFt7EEokQSRaDh6X7pQ2lu66
+        uxga439325pAi+xpZ+fNmzfz9grM8a6nL5PwfRXAU/i8gNX6cTGfQKdHyDwI
+        Z4RMw2md6d9ZhATLjn9VlSV6l9XXOkTKjmH1pFOdoR9IyaUDQ2sIS65hxvc5
+        80ida+KVLjIEXQh86Gg8aBIp1WliAMq28L2h0cdWllS9iGclfxcRXYh5rnsx
+        3aVZ4YCiuXJ/WvUbzop/6+M4dk1WMjSRLQ6geJYy6DLG3BZHfQRlLM23BjwS
+        Bxd2VG7T/C9qdxUSL4u+0PTY4JzRI9WyTvZPmgZ45Zyt/Sb2BTNMookU/huX
+        srgFnSBI/Nyj0shg/bowrmr/pmsN7t1Ea+EQkvGIZglX2hlbY4t82SRCQez+
+        YDiqccZs3XYRIrpXhpHmgJUkj4i2Bol+qTEuNTpQc51zl7CTLRzHNmNVP/QX
+        8ak9XOUCAAA=
+    http_version: 
+  recorded_at: Tue, 12 May 2015 05:37:46 GMT
+recorded_with: VCR 2.9.3

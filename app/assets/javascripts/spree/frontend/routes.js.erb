@@ -1,1 +1,4 @@
 Spree.routes.cities_search = Spree.pathFor('api/cities');
+Spree.routes.address_show = function (cep) {
+  return Spree.pathFor('addresses/' + cep);
+};
