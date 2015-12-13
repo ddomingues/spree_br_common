@@ -37,8 +37,8 @@ end
 
 def create_admin_user
   attributes = {
-      :password => 'fulano',
-      :email => 'admin@bluesoft.com.br',
+      :password => 'spree123',
+      :email => 'spree@example.com',
       :first_name => 'admin',
       :last_name => 'admin',
       :phone => '11 12212122',
