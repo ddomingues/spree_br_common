@@ -15,13 +15,13 @@ describe Spree::AddressesController, :type => :controller do
     it 'does not find an incorrect cep' do
       api_get :show, {cep: '00000000'}
 
-      expect(response.status).to eq 404
+      expect(response).to have_http_status(:not_found)
     end
 
     it 'requires :cep parameter' do
       expect {
         api_get :show
-      }.to raise_exception
+      }.to raise_error ActionController::ParameterMissing
     end
   end
 end
